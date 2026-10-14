@@ -13,7 +13,7 @@ cover: "/images/home/homepage-depmap-3.webp"
 links: [{"label": "DepMap portal", "url": "https://depmap.org/portal/"}]
 ---
 
-<!-- video: squarespace 8bd6d970-12c3-48ba-b171-53ea9243ca38 (not yet downloaded) -->
+<figure><video controls preload="none" playsinline width="1280" height="720" poster="/videos/depmap/portal-release.webp" aria-label="DepMap portal release video: tour of the portal"><source src="/videos/depmap/portal-release.mp4" type="video/mp4"></video></figure>
 
 ## The background
 
@@ -91,17 +91,17 @@ The landing page for the portal give users many points of entry into the data it
 
 Here are some examples of the deep dive tools available on the portal, user would enter into these tools either through the data cards or through the tools dropdown menu. Entering a tool through a data card would automatically populate the tool with the analysis defined from the card. Entering a tool through the dropdown menu, the user will will need to define the parameters themselves.
 
-<div class="row cols-2">
+<div class="row gallery cols-2">
 
 <div>
 
-
+<figure><video controls preload="none" playsinline width="1280" height="720" poster="/videos/depmap/violin-plots.webp" aria-label="Screen recording: exploring gene effect with violin plots"><source src="/videos/depmap/violin-plots.mp4" type="video/mp4"></video></figure>
 
 </div>
 
 <div>
 
-
+<figure><video controls preload="none" playsinline width="1280" height="720" poster="/videos/depmap/scatter-plots.webp" aria-label="Screen recording: exploring relationships with interactive scatterplots"><source src="/videos/depmap/scatter-plots.mp4" type="video/mp4"></video></figure>
 
 </div>
 

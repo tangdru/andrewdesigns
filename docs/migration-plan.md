@@ -26,7 +26,7 @@ descriptions and share images, and redirects for old slugs. Visual design is a
 faithful-but-cleaner recreation of the Squarespace look. Remaining before
 cancelling Squarespace:
 
-- [ ] Download the 4 Squarespace videos (3 on DepMap, 1 on Webster); needs
+- [x] DepMap videos added (`public/videos/depmap/`). [ ] Webster video still needed; needs
       `video.squarespace-cdn.com` on the environment's allowed domains, or
       export them from Squarespace. Marked with `<!-- video: -->` comments.
 - [ ] Review the preview, then follow `docs/cutover.md`.

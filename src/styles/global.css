@@ -62,7 +62,7 @@ strong, b { font-weight: var(--weight-medium); }
 .prose hr { border: 0; border-top: 1px solid var(--color-rule); margin-block: var(--space-6) 0; }
 .prose hr + h2 { margin-top: var(--space-4); }
 .prose figure { margin: 0; }
-.prose figure img { width: 100%; background: var(--color-wash); }
+.prose figure :is(img, video) { width: 100%; background: var(--color-wash); }
 .prose figcaption { font-size: var(--size-small); color: var(--color-ink-muted); margin-top: var(--space-2); }
 .prose figure + p, .prose .row + p { margin-top: var(--space-3); }
 
