@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+
+const pubs = (await getCollection('publications')).sort((a, b) => Number(a.id) - Number(b.id));
+---
+<Base title="Publications" description="Papers, books and journal features Andrew Tang contributed design and data visualization to, from Nature and Cell to Yale University Press.">
+  <div class="wrap">
+    <h1>Publications</h1>
+    <ol role="list">
+      {pubs.map(({ data }) => (
+        <li>
+          <h2>
+            {data.url ? <a href={data.url} rel="noopener">{data.title}</a> : data.title}
+          </h2>
+          <p class="venue">{[data.venue, data.year].filter(Boolean).join(', ')}
+            {data.project && <> · <a href={url(`/${data.project}`)}>Case study</a></>}
+          </p>
+          <p class="abstract">{data.abstract}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+
+<style>
+  h1 { font-size: var(--size-h1); margin: var(--space-6) auto var(--space-5); max-width: var(--content-max); }
+  ol { list-style: none; padding: 0; margin: 0 auto; max-width: var(--content-max); display: grid; gap: var(--space-5); }
+  li { max-width: var(--measure); border-top: 1px solid var(--color-rule); padding-top: var(--space-4); }
+  h2 { font-size: var(--size-h3); }
+  .venue { color: var(--color-ink-muted); font-size: var(--size-small); margin: var(--space-2) 0 0; }
+  .abstract { margin: var(--space-3) 0 0; }
+</style>

@@ -18,6 +18,21 @@ designer; the site is itself a portfolio piece, so craft matters.
   www.andrewdesigns.info). Moving to Cloudflare Pages or Netlify later is just a
   deploy-settings change; don't depend on host-specific features.
 
+## Layout of the code
+
+- `content/projects/*.md`: case studies (body is markdown with small HTML
+  blocks: `<figure>`, and `<div class="row gallery|split cols-N">` for rows)
+- `content/pages/*.md`, `content/resume.md`, `content/publications.json`,
+  `content/site.json` (nav, home intro); `content/drafts/` is not rendered
+- `src/content.config.ts`: collection schemas
+- `src/styles/tokens.css`: all design tokens; `global.css`: base + prose
+- Images live in `public/images/<slug>/` (optimized WebP, ≤2000px wide).
+  Content always uses root paths (`/images/...`, `/webster`);
+  `src/plugins/rehype-base.mjs` and `url()` add the base path.
+- `npm run build` must pass before pushing. `BASE_PATH=/andrewdesigns npm run
+  build` reproduces the GitHub Pages preview build.
+- Deploy: `.github/workflows/deploy.yml`; cutover steps in `docs/cutover.md`.
+
 ## Rules
 
 - **All copy lives in `content/`** (markdown/JSON with frontmatter). Components

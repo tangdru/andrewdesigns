@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+---
+<Base title="Page not found" description="This page could not be found.">
+  <div class="wrap">
+    <h1>Page not found</h1>
+    <p>That page has moved or no longer exists. <a href={url('/')}>See all work</a>.</p>
+  </div>
+</Base>
+
+<style>
+  h1 { font-size: var(--size-h1); margin: var(--space-6) 0 var(--space-4); }
+</style>

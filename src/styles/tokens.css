@@ -1,0 +1,50 @@
+/* Design tokens. Values carried over from the Squarespace site (see docs/audit.md). */
+:root {
+  /* Color */
+  --color-ink: hsl(0 0% 7%);            /* #121212 */
+  --color-ink-muted: hsl(0 0% 32%);
+  --color-paper: hsl(0 0% 100%);
+  --color-wash: hsl(210 6% 93%);         /* #EDEEEF footer band */
+  --color-rule: hsl(0 0% 72%);
+  --color-accent: hsl(43 83% 47%);       /* #DCA014 gold */
+  --color-accent-text: hsl(40 90% 30%);  /* gold dark enough for small text (AA) */
+  --color-accent-2: hsl(218 43% 52%);    /* #4F75BA blue */
+  --color-focus: hsl(218 43% 45%);
+
+  /* Type. Halyard Display was licensed through Squarespace; Figtree is a free
+     stand-in. Swap the family here if you set up an Adobe Fonts web project. */
+  --font-sans: 'Figtree Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --tracking-body: 0.02em;
+  --tracking-heading: 0.01em;
+  --leading-body: 1.6;
+  --leading-heading: 1.2;
+
+  --size-display: clamp(2rem, 1.2rem + 3.2vw, 3.4rem);
+  --size-h1: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --size-h2: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem);
+  --size-h3: 1.4rem;
+  --size-h4: 1.15rem;
+  --size-body: 1.0625rem;
+  --size-small: 0.875rem;
+
+  /* Space and layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --measure: 46rem;          /* reading column */
+  --content-max: 72rem;      /* figures and grids */
+  --radius: 2px;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

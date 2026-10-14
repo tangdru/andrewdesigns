@@ -1,0 +1,39 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+
+const page = (await getEntry('pages', 'about'))!;
+const resume = (await getEntry('resume', 'resume'))!;
+const { Content: Bio } = await render(page);
+const { Content: Resume } = await render(resume);
+---
+<Base title={page.data.title} description={page.data.description}>
+  <div class="wrap">
+    <h1 class="title">About</h1>
+    <div class="intro">
+      {page.data.photo && (
+        <img class="photo" src={url(page.data.photo)} alt={page.data.photo_alt ?? ''} width="1000" height="750" decoding="async" />
+      )}
+      <div class="prose bio"><Bio /></div>
+    </div>
+    <div class="prose resume"><Resume /></div>
+    <section class="prose contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p><a href={`mailto:${resume.data.email}`}>{resume.data.email}</a></p>
+      <p><a href={resume.data.linkedin} rel="me noopener">LinkedIn</a></p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .title { font-size: var(--size-h1); margin: var(--space-6) 0 var(--space-5); max-width: var(--content-max); margin-inline: auto; }
+  .intro { display: grid; gap: var(--space-5); max-width: var(--content-max); margin-inline: auto; align-items: start; }
+  @media (min-width: 860px) { .intro { grid-template-columns: 2fr 3fr; } }
+  .photo { width: 100%; }
+  .resume :global(h2) { font-size: var(--size-h2); }
+  .resume :global(h3) { font-size: var(--size-h4); font-weight: var(--weight-regular); margin-top: var(--space-4); }
+  .resume :global(h3 + p) { margin-top: var(--space-2); }
+  .contact h2 { font-size: var(--size-h2); }
+  .contact p { margin-top: var(--space-2); }
+</style>

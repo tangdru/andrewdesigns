@@ -1,0 +1,20 @@
+---
+import site from '../../content/site.json';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap inner">
+    <p>© {year} {site.author}</p>
+    <p>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <span aria-hidden="true"> · </span>
+      <a href={site.linkedin} rel="me noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--color-wash); margin-top: var(--space-7); font-size: var(--size-small); }
+  .inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2) var(--space-4); padding-block: var(--space-5); }
+  p { margin: 0; }
+</style>

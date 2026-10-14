@@ -16,16 +16,32 @@ Keep Squarespace live until the new site is verified on its preview URL.
 6. **Typeface.** Keep Halyard Display (needs Adobe Fonts web license) or choose
    a new face as part of the redesign.
 
+## Status (2026-10-14)
+
+Primary reader decided: prospective employers and collaborators.
+
+Migration build done: every public page is recreated in Astro from
+`content/`, with typos fixed, alt text on every image, unique meta
+descriptions and share images, and redirects for old slugs. Visual design is a
+faithful-but-cleaner recreation of the Squarespace look. Remaining before
+cancelling Squarespace:
+
+- [ ] Download the 4 Squarespace videos (3 on DepMap, 1 on Webster); needs
+      `video.squarespace-cdn.com` on the environment's allowed domains, or
+      export them from Squarespace. Marked with `<!-- video: -->` comments.
+- [ ] Review the preview, then follow `docs/cutover.md`.
+- [ ] Confirm project years/orgs in frontmatter (DepMap year unknown) and add
+      dates to `content/resume.md`.
+- [ ] Optional: swap in original images from the source folder.
+
 ## Phases
 
 0. **Audit** (done, `docs/audit.md`).
-1. **Content extraction.** Move every page's copy into `content/` using the
-   templates; fix typos; write meta descriptions and alt text; gather source
-   images. Fill `content/sources/` per project.
-2. **Design direction.** Recreate, evolve, or redesign. Explore in Figma or as
-   HTML mockups; agree tokens (type, color, spacing, motion).
-3. **Build.** Astro scaffold, layout, home, case study template, about/resume,
-   publications, visual design gallery.
+1. **Content extraction** (done). Still to do: fill `content/sources/` per
+   project; swap in original images.
+2. **Design direction.** Recreate (done for the migration), then evolve or
+   redesign. Explore in Figma or as HTML mockups; agree tokens.
+3. **Build** (done for existing pages).
 4. **Motion.** Motion tokens; page transitions; a few scroll moments.
 5. **Live data viz.** One rebuilt demo first (e.g. a small directed 3D UMAP in
    Three.js, or the MetMap plot in D3) with a data subset safe to publish.

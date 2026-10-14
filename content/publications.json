@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Design and user experience testing of a polygenic score report: a qualitative study of prospective users",
+    "venue": "BMC Medical Genomics",
+    "year": 2021,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34598685/",
+    "abstract": "Polygenic scores, which quantify inherited risk by integrating information from many common sites of DNA variation, may enable a tailored approach to clinical medicine. However, alongside considerable enthusiasm, we and others have highlighted a lack of standardized approaches for score disclosure. Here, we review the landscape of polygenic score reporting and describe a generalizable approach for development of a polygenic score disclosure tool for coronary artery disease."
+  },
+  {
+    "title": "A first-generation pediatric cancer dependency map",
+    "venue": "Nature Genetics",
+    "year": 2021,
+    "url": "https://doi.org/10.1038/s41588-021-00819-w",
+    "abstract": "Exciting therapeutic targets are emerging from CRISPR-based screens of high mutational-burden adult cancers. A key question, however, is whether functional genomic approaches will yield new targets in pediatric cancers, known for remarkably few mutations, which often encode proteins considered challenging drug targets. To address this, we created a first-generation pediatric cancer dependency map representing 13 pediatric solid and brain tumor types…"
+  },
+  {
+    "title": "A metastasis map of human cancer cell lines",
+    "venue": "Nature",
+    "year": 2020,
+    "url": "https://doi.org/10.1038/s41586-020-2969-2",
+    "project": "metmap",
+    "abstract": "Most deaths from cancer are explained by metastasis, and yet large-scale metastasis research has been impractical owing to the complexity of in vivo models. Here we introduce an in vivo barcoding strategy that is capable of determining the metastatic potential of human cancer cell lines in mouse xenografts at scale. We validated the robustness, scalability and reproducibility of the method and applied it to 500 cell lines spanning 21 types of solid tumour. We created a first-generation metastasis map (MetMap) that reveals organ-specific patterns of metastasis, enabling these patterns to be associated with clinical and genomic features…"
+  },
+  {
+    "title": "Phosphate dysregulation via the XPR1–KIDINS220 protein complex is a therapeutic vulnerability in ovarian cancer",
+    "venue": "Nature Cancer",
+    "year": 2022,
+    "url": "https://www.nature.com/articles/s43018-022-00360-7",
+    "abstract": "Despite advances in precision medicine, the clinical prospects for patients with ovarian and uterine cancers have not substantially improved. Here, we analyzed genome-scale CRISPR–Cas9 loss-of-function screens across 851 human cancer cell lines and found that frequent overexpression of SLC34A2, encoding a phosphate importer, is correlated with sensitivity to loss of the phosphate exporter XPR1, both in vitro and in vivo. In patient-derived tumor samples, we observed frequent PAX8-dependent overexpression of SLC34A2, XPR1 copy number amplifications and XPR1 messenger RNA overexpression…"
+  },
+  {
+    "title": "Discovering the anticancer potential of non-oncology drugs by systematic viability profiling",
+    "venue": "Nature Cancer",
+    "year": 2020,
+    "url": "https://www.nature.com/articles/s43018-019-0018-6",
+    "abstract": "Anticancer uses of non-oncology drugs have occasionally been found, but such discoveries have been serendipitous. We sought to create a public resource containing the growth-inhibitory activity of 4,518 drugs tested across 578 human cancer cell lines. We used PRISM (profiling relative inhibition simultaneously in mixtures), a molecular barcoding method, to screen drugs against cell lines in pools. An unexpectedly large number of non-oncology drugs selectively inhibited subsets of cancer cell lines in a manner predictable from the molecular features of the cell lines…"
+  },
+  {
+    "title": "Lineage tracing: papers and progress",
+    "venue": "Cell Stem Cell",
+    "year": 2017,
+    "url": "http://dx.doi.org/10.1016/j.stem.2017.06.015",
+    "abstract": "This visualization is based on the Cell Stem Cell tenth anniversary theme of lineage tracing. Using Scopus citations of Cell Stem Cell research papers, it illustrates both the evolution of the stem cell field and the way new research builds on work that came before. Users can navigate the graphic and the represented papers by stem cell type, organism, and author online at cell.com/i3/cell-stem-cell/lineage."
+  },
+  {
+    "title": "Visual Strategies",
+    "venue": "Yale University Press",
+    "year": null,
+    "url": null,
+    "abstract": "Visual communicator Felice Frankel and systems biologist Angela DePace, along with experts in various fields, demonstrate how small changes can vastly improve the success of a graphic image. They dissect individual graphics, show why some work while others don’t, and suggest specific improvements. The book includes analyses of graphics that have appeared in such journals as Science, Nature, Annual Reviews, Cell, PNAS, and the New England Journal of Medicine, as well as an insightful personal conversation with designer Stefan Sagmeister and narratives by prominent researchers and animators."
+  },
+  {
+    "title": "SnapShot: convenient, comprehensive, and now clickable",
+    "venue": "Cell",
+    "year": null,
+    "url": null,
+    "abstract": "Since its debut in Cell nearly 3 years ago, SnapShot has quickly become one of our most highly downloaded features. Conceived as handy one-page reference guides (cheat sheets) for important topics in cell and molecular biology, SnapShots have encapsulated diverse subjects ranging from silencing by small RNAs to the plant immune response. Building on this success, we are now loosening the tether between SnapShot and the printed page. The result: Enhanced SnapShot. Enhanced SnapShots include features only possible online (animations, embedded captions, and dynamic visuals), all accessible by the click of a mouse."
+  }
+]

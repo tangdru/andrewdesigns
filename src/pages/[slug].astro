@@ -1,0 +1,66 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+
+export async function getStaticPaths() {
+  const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+    (a, b) => a.data.order - b.data.order,
+  );
+  return projects.map((project, i) => ({
+    params: { slug: project.id },
+    props: { project, next: projects[(i + 1) % projects.length] },
+  }));
+}
+
+const { project, next } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+const meta = [data.org, data.year].filter(Boolean).join(' · ');
+---
+<Base title={data.title} description={data.description} image={`/og/${project.id}.png`}>
+  <article>
+    {data.cover && (
+      <div class="cover">
+        <img src={url(data.cover)} alt="" fetchpriority="high" decoding="async" />
+      </div>
+    )}
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow">{data.eyebrow}</p>
+        <h1>{data.title}</h1>
+        <p class="summary">{data.summary}</p>
+        {meta && <p class="meta">{meta}</p>}
+        {data.links.length > 0 && (
+          <ul class="links" role="list">
+            {data.links.map((l) => <li><a href={l.url} rel="noopener">{l.label} <span aria-hidden="true">↗</span></a></li>)}
+          </ul>
+        )}
+      </header>
+      <div class="prose">
+        <Content />
+      </div>
+      <nav class="next" aria-label="Next case study">
+        <a href={url(`/${next.id}`)}>
+          <span class="eyebrow">Next</span>
+          <span class="next-title">{next.data.title}</span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .cover { background: var(--color-wash); }
+  .cover img { width: 100%; max-height: 70vh; object-fit: cover; }
+  .head { max-width: var(--measure); margin: var(--space-6) auto var(--space-5); margin-left: max(0px, calc((100% - var(--content-max)) / 2)); }
+  h1 { font-size: var(--size-h1); margin-top: var(--space-2); }
+  .summary { font-size: 1.25rem; margin: var(--space-3) 0 0; }
+  .meta { color: var(--color-ink-muted); font-size: var(--size-small); margin: var(--space-3) 0 0; }
+  .links { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
+  .links a { font-weight: var(--weight-regular); }
+  .next { max-width: var(--content-max); margin: var(--space-7) auto 0; border-top: 1px solid var(--color-rule); padding-top: var(--space-4); }
+  .next a { display: inline-flex; flex-direction: column; text-decoration: none; }
+  .next-title { font-size: var(--size-h2); }
+  .next a:hover .next-title { text-decoration: underline; text-decoration-color: var(--color-accent); }
+</style>

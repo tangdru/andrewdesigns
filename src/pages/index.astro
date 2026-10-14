@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import site from '../../content/site.json';
+import { url, inline } from '../lib/url';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const sections = site.sections.map((s) => ({
+  ...s,
+  items: projects.filter((p) => p.data.category === s.category),
+}));
+---
+<Base description={site.description}>
+  <div class="wrap">
+    <h1 class="intro" set:html={inline(site.intro)} />
+
+    {sections.map((section) => (
+      <section class:list={['work', `work--${section.category}`]} aria-labelledby={`h-${section.category}`}>
+        <h2 id={`h-${section.category}`}>{section.title}</h2>
+        <ul role="list">
+          {section.items.map((p) => (
+            <li>
+              <a href={url(`/${p.id}`)} class="card">
+                <img src={url(p.data.thumbnail)} alt="" loading="lazy" decoding="async" />
+                <span class="card-text">
+                  <span class="card-title">{p.data.title}</span>
+                  <span class="card-meta">{p.data.eyebrow} | {p.data.tags.join(' + ')}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .intro {
+    font-size: var(--size-display);
+    line-height: 1.25;
+    max-width: 22em;
+    margin: var(--space-6) 0 var(--space-6);
+  }
+  .intro :global(strong) { color: var(--color-accent-text); font-weight: var(--weight-medium); }
+
+  .work { border-top: 1px solid var(--color-rule); padding-top: var(--space-3); margin-top: var(--space-5); }
+  .work h2 { font-size: var(--size-h3); margin-bottom: var(--space-4); }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-6); }
+  .work--dataviz ul { gap: var(--space-5) var(--space-4); }
+  @media (min-width: 720px) {
+    .work--dataviz ul { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .card { display: flex; flex-direction: column-reverse; gap: var(--space-3); text-decoration: none; }
+  .card img { width: 100%; background: var(--color-wash); transition: transform var(--duration-base) var(--ease-out); }
+  .work--dataviz .card img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+  .card:hover img { transform: translateY(-4px); }
+  .card-text { display: flex; flex-direction: column; gap: var(--space-1); }
+  .card-title { font-size: var(--size-h4); font-weight: var(--weight-regular); }
+  .card-meta { font-size: var(--size-small); color: var(--color-ink-muted); }
+  .card:hover .card-title { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+</style>
