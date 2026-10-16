@@ -11,7 +11,7 @@ linkedin: "https://www.linkedin.com/in/andrew-designs/"
 ## Experience
 
 ### Novartis
-Associate Director of Design Foundations. Designing human-in-the-loop agentic workflows that bring AI into core business processes, and leading user-centered design for the Kinnect CRM transformation from Veeva to Salesforce.
+Associate Director of Design Foundations. Designing human-in-the-loop agentic workflows that bring AI into core business processes, and leading user-centered design for the US commercial products.
 
 ### Independent consultant
 Shaping and prototyping 0→1 products with multiple teams while auditing their digital processes end-to-end: mapping workflows, surfacing friction points, and translating UX insights into business terms.
