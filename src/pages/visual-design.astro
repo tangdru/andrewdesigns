@@ -2,6 +2,7 @@
 import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { url, inline } from '../lib/url';
+import Lightbox from '../components/Lightbox.astro';
 
 const page = (await getEntry('pages', 'visual-design'))!;
 const { Content } = await render(page);
@@ -19,6 +20,7 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
   <div class="prose page-grid" style={gridVars}>
     <Content />
   </div>
+  <Lightbox />
 </Base>
 
 <script>

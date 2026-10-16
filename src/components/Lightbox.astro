@@ -1,0 +1,64 @@
+---
+// Click (or Enter/Space) any content image to open it full-size with PhotoSwipe:
+// scroll/pinch to zoom, swipe or arrow keys to move through the page's images,
+// Esc to close. Images that are already links (e.g. to a case study) are skipped.
+---
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const imgs = [...document.querySelectorAll<HTMLImageElement>('.prose figure img')].filter(
+    (img) => !img.closest('a'),
+  );
+
+  if (imgs.length) {
+    const lightbox = new PhotoSwipeLightbox({
+      pswpModule: () => import('photoswipe'),
+      bgOpacity: 0.96,
+      wheelToZoom: true,
+      initialZoomLevel: 'fit',
+      secondaryZoomLevel: 1,
+      maxZoomLevel: 2,
+      showHideAnimationType: reduceMotion ? 'none' : 'zoom',
+      closeTitle: 'Close (Esc)',
+      zoomTitle: 'Zoom',
+      arrowPrevTitle: 'Previous (arrow left)',
+      arrowNextTitle: 'Next (arrow right)',
+    });
+    lightbox.init();
+
+    const buttons: HTMLButtonElement[] = [];
+    const dataSource = () =>
+      imgs.map((img, i) => ({
+        src: img.currentSrc || img.src,
+        width: img.naturalWidth || Number(img.getAttribute('width')) || 1600,
+        height: img.naturalHeight || Number(img.getAttribute('height')) || 1200,
+        alt: img.alt,
+        element: buttons[i],
+      }));
+
+    imgs.forEach((img, i) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'zoom';
+      button.setAttribute('aria-label', img.alt ? `View larger: ${img.alt}` : 'View larger image');
+      img.replaceWith(button);
+      button.append(img);
+      button.addEventListener('click', () => lightbox.loadAndOpen(i, dataSource()));
+      buttons.push(button);
+    });
+  }
+</script>
+
+<style is:global>
+  .zoom {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+  }
+  .zoom img { width: 100%; }
+</style>

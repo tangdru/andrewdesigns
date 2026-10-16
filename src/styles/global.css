@@ -85,7 +85,7 @@ strong, b { font-weight: var(--weight-bold); }
 
 /* Images placed at their original columns, fitted inside the cell */
 .prose > figure.placed { grid-column: var(--mgc); }
-.prose .placed > :is(img, video, a), .prose .placed figure > :is(img, video, a) { width: var(--mfw, 100%); margin-inline: auto; }
+.prose .placed > :is(img, video, a, .zoom), .prose .placed figure > :is(img, video, a, .zoom) { width: var(--mfw, 100%); margin-inline: auto; }
 .prose .placed figure > a > img, .prose figure.placed > a > img { width: 100%; }
 
 /* Rows of side-by-side blocks */
@@ -98,13 +98,13 @@ strong, b { font-weight: var(--weight-bold); }
   align-items: center;
 }
 .prose > .row.placed > div { grid-column: var(--mgc); grid-row: var(--mgr); }
-.prose .row.placed figure > :is(img, video, a) { width: var(--mfw, 100%); }
+.prose .row.placed figure > :is(img, video, a, .zoom) { width: var(--mfw, 100%); }
 
 @media (min-width: 768px) {
   .prose > figure.placed { grid-column: var(--gc); }
-  .prose .placed > :is(img, video, a), .prose .placed figure > :is(img, video, a) { width: var(--fw, 100%); }
+  .prose .placed > :is(img, video, a, .zoom), .prose .placed figure > :is(img, video, a, .zoom) { width: var(--fw, 100%); }
   .prose > .row.placed > div { grid-column: var(--gc); grid-row: var(--gr); }
-  .prose .row.placed figure > :is(img, video, a) { width: var(--fw, 100%); }
+  .prose .row.placed figure > :is(img, video, a, .zoom) { width: var(--fw, 100%); }
   .prose .row.cols-2:not(.placed) { grid-template-columns: repeat(2, 1fr); }
   .prose .row.cols-3:not(.placed) { grid-template-columns: repeat(3, 1fr); }
   .prose .row.cols-4:not(.placed) { grid-template-columns: repeat(4, 1fr); }
