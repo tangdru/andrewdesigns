@@ -41,6 +41,10 @@
   --space-6: 4rem;
   --space-7: 6rem;
   --gutter: clamp(1rem, 4vw, 3rem);
+  --grid-max: 1500px;       /* Squarespace site max width */
+  --grid-gap: 11px;
+  --grid-gutter-d: 4vw;
+  --grid-gutter-m: 6vw;
   --measure: 46rem;          /* reading column */
   --content-max: 72rem;      /* figures and grids */
   --radius: 2px;

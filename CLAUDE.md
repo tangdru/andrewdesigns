@@ -21,7 +21,11 @@ designer; the site is itself a portfolio piece, so craft matters.
 ## Layout of the code
 
 - `content/projects/*.md`: case studies (body is markdown with small HTML
-  blocks: `<figure>`, and `<div class="row gallery|split cols-N">` for rows)
+  blocks: `<figure>`, and `<div class="row ...">` for rows). Layout reproduces
+  the Squarespace fluid grid (`.page-grid`: 24 cols desktop / 8 mobile): a
+  `placed` figure or row cell carries its original columns (`--gc`/`--mgc`,
+  rows `--gr`/`--mgr`) and the share of its cell the image filled
+  (`--fw`/`--mfw`); frontmatter `grid.text` sets the page's text column.
 - `content/pages/*.md`, `content/resume.md`, `content/publications.json`,
   `content/site.json` (nav, home intro); `content/drafts/` is not rendered
 - `src/content.config.ts`: collection schemas

@@ -3,6 +3,8 @@ import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const link = z.object({ label: z.string(), url: z.string() });
+// Text column on the page grid (see .page-grid in global.css), e.g. "5/21".
+const grid = z.object({ text: z.string(), mtext: z.string() }).optional();
 
 const projects = defineCollection({
   loader: glob({ pattern: '[^_]*.md', base: './content/projects' }),
@@ -23,6 +25,7 @@ const projects = defineCollection({
     cover_video: z.string().optional(),
     cover_video_label: z.string().optional(),
     links: z.array(link).default([]),
+    grid,
   }),
 });
 
@@ -35,6 +38,7 @@ const pages = defineCollection({
     cover: z.string().optional(),
     photo: z.string().optional(),
     photo_alt: z.string().optional(),
+    grid,
   }),
 });
 

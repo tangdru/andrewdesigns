@@ -46,9 +46,26 @@ strong, b { font-weight: var(--weight-bold); }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
+/* ---------- Page grid ----------
+   Same geometry as the Squarespace fluid grid the site came from: 8 columns
+   with 6vw side gutters on phones, 24 columns with 4vw gutters (max 1500px)
+   from 768px up, 11px column gap. Content files carry each image's original
+   columns (--gc / --mgc) and how much of its cell it filled (--fw / --mfw). */
+.page-grid {
+  --cols: 8;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  width: min(var(--grid-max), 100% - 2 * var(--grid-gutter-m));
+  margin-inline: auto;
+}
+.page-grid > * { grid-column: var(--mtext, 1 / -1); min-width: 0; }
+@media (min-width: 768px) {
+  .page-grid { --cols: 24; width: min(var(--grid-max), 100% - 2 * var(--grid-gutter-d)); }
+  .page-grid > * { grid-column: var(--text, 5 / 21); }
+}
+
 /* ---------- Long-form content from markdown ---------- */
-.prose { max-width: var(--content-max); margin-inline: auto; }
-.prose > :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, .meta) { max-width: var(--measure); }
 .prose > * + * { margin-top: var(--space-4); }
 :where(.prose) :where(p, li) { margin: 0; }
 .prose :where(h2, h3, h4, h5, h6) + * { margin-top: var(--space-3); }
@@ -66,15 +83,33 @@ strong, b { font-weight: var(--weight-bold); }
 .prose figcaption { font-size: var(--size-small); color: var(--color-ink-muted); margin-top: var(--space-2); }
 .prose figure + p, .prose .row + p { margin-top: var(--space-3); }
 
+/* Images placed at their original columns, fitted inside the cell */
+.prose > figure.placed { grid-column: var(--mgc); }
+.prose .placed > :is(img, video, a), .prose .placed figure > :is(img, video, a) { width: var(--mfw, 100%); margin-inline: auto; }
+.prose .placed figure > a > img, .prose figure.placed > a > img { width: 100%; }
+
+/* Rows of side-by-side blocks */
 .prose .row { display: grid; gap: var(--space-4); align-items: start; }
 .prose .row > div > * + * { margin-top: var(--space-3); }
-@media (min-width: 720px) {
-  .prose .row.cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .prose .row.cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .prose .row.cols-4 { grid-template-columns: repeat(4, 1fr); }
-  .prose .row.split { align-items: center; }
+.prose > .row.placed {
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--space-4) var(--grid-gap);
+  align-items: center;
 }
-.prose .row.gallery figure img { height: auto; }
+.prose > .row.placed > div { grid-column: var(--mgc); grid-row: var(--mgr); }
+.prose .row.placed figure > :is(img, video, a) { width: var(--mfw, 100%); }
+
+@media (min-width: 768px) {
+  .prose > figure.placed { grid-column: var(--gc); }
+  .prose .placed > :is(img, video, a), .prose .placed figure > :is(img, video, a) { width: var(--fw, 100%); }
+  .prose > .row.placed > div { grid-column: var(--gc); grid-row: var(--gr); }
+  .prose .row.placed figure > :is(img, video, a) { width: var(--fw, 100%); }
+  .prose .row.cols-2:not(.placed) { grid-template-columns: repeat(2, 1fr); }
+  .prose .row.cols-3:not(.placed) { grid-template-columns: repeat(3, 1fr); }
+  .prose .row.cols-4:not(.placed) { grid-template-columns: repeat(4, 1fr); }
+  .prose .row.split:not(.placed) { align-items: center; }
+}
 
 /* Linked images (e.g. gallery tiles linking to case studies) */
 .prose figure a { display: block; overflow: hidden; }

@@ -12,6 +12,7 @@ description: "Mission Control at Ginkgo Bioworks: research, design and testing o
 thumbnail: "/images/home/homepage-missioncontrol-4.webp"
 cover: "/images/home/homepage-missioncontrol-4.webp"
 links: []
+grid: {"text": "5/21", "mtext": "1/9"}
 ---
 
 [Solution](#mcsolution) | [Results](#mcresults) | [Process](#mcprocess) | [Design](#mcdesign) | [Testing](#mctesting) | [Metrics](#mcmetrics)
@@ -28,17 +29,17 @@ Project Leads (PL’s), who are responsible for leading the scientific effort an
 
 - PL’s then must use a separate order management system to place orders to various internal labs to run experiments; experiments can be stand-alone and non-dependent or strung together into modules where downstream experiments are dependent on upstream results. Also depending on the exact parameters of an experiment and time considerations, experiments are often run in parallel.
 
-<figure><img src="/images/missioncontrol/screenshot-2024-06-11-at-3-42-25-pm.webp" alt="Bar chart of survey respondents&#x27; tool usage, 23Q3 versus 24Q1" width="2000" height="769" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/screenshot-2024-06-11-at-3-42-25-pm.webp" alt="Bar chart of survey respondents&#x27; tool usage, 23Q3 versus 24Q1" width="2000" height="769" loading="lazy" decoding="async"></figure>
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/image--2.webp" alt="Project planning spreadsheet used by project leads" width="2000" height="1123" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/image--3.webp" alt="Servicely order management system requester dashboard" width="2000" height="1005" loading="lazy" decoding="async"></figure>
 
@@ -46,15 +47,15 @@ Project Leads (PL’s), who are responsible for leading the scientific effort an
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Planning spreadsheet
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Order management system
 
@@ -88,33 +89,33 @@ Order management system
 
 A single view where Project Leads can see their project plans along side the orders of experiments that are running in the lab or queued up. Before Mission Control, this would be a manual process for PL’s to keep track of the progress of all the lab experiments to compare with the planned timelines, and then would have to make adjustments in two different places if there was a delay.
 
-<figure><img src="/images/missioncontrol/mc-projectpage-2-drop.webp" alt="Mission Control project page with an order panel expanded" width="2000" height="1185" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:97.86%"><img src="/images/missioncontrol/mc-projectpage-2-drop.webp" alt="Mission Control project page with an order panel expanded" width="2000" height="1185" loading="lazy" decoding="async"></figure>
 
 The value added is a contextual view of all of the experimental orders, this enables the user to see upstream and downstream of a project and to see dependencies. Mission Control is able to read from the planning spreadsheet, so the back-end would be able to find and assign experiment orders to tasks to allow users to bulk create orders instead of manually searching and finding orders and placing them individually in the current system.
 
 One surprise benefit we learned after the MVP was deployed, the interface gave a single view to the whole project team, as other members of the team would request orders and the MC interface automatically found and associated them to the correct task!
 
-<div class="row gallery cols-4">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/mc-projectpage-5.webp" alt="Annotated Mission Control project page: navigation, workspace and order details" width="2000" height="1053" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:98.69%">
 
 <figure><img src="/images/missioncontrol/mc-projectpage-1.webp" alt="Mission Control project page showing modules and linked orders" width="2000" height="1175" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:98.69%">
 
 <figure><img src="/images/missioncontrol/image--2-2.webp" alt="Mission Control development build of the project page" width="2000" height="1175" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:17/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:7/8;--mfw:98.69%">
 
 <figure><img src="/images/missioncontrol/mc-projectpage-4.webp" alt="Mission Control &quot;Create orders for module&quot; bulk ordering panel" width="2000" height="1175" loading="lazy" decoding="async"></figure>
 
@@ -122,27 +123,27 @@ One surprise benefit we learned after the MVP was deployed, the interface gave a
 
 </div>
 
-<div class="row gallery cols-4">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:98.69%">
 
 <figure><img src="/images/missioncontrol/mc-projectpage-6.webp" alt="Mission Control project page with orders grouped by module" width="2000" height="1175" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:98.69%">
 
 <figure><img src="/images/missioncontrol/mc-projectpage-7.webp" alt="Mission Control project page with paused orders" width="2000" height="1175" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:98.62%">
 
 <figure><img src="/images/missioncontrol/mc-landing.webp" alt="Mission Control landing page with color-coded project cards" width="2000" height="1176" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:17/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:7/8;--mfw:98.62%">
 
 <figure><img src="/images/missioncontrol/mc-landing-2.webp" alt="Mission Control &quot;Add project&quot; dialog" width="2000" height="1176" loading="lazy" decoding="async"></figure>
 
@@ -152,21 +153,21 @@ One surprise benefit we learned after the MVP was deployed, the interface gave a
 
 <hr>
 
-<div class="row cols-3">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/10;--gr:1/3;--mgc:1/9;--mgr:1/2">
 
 ### “This will **solve and remove a lot of the cognitive** workload for a PL.”
 
 </div>
 
-<div>
+<div style="--gc:10/15;--gr:1/2;--mgc:1/9;--mgr:2/3">
 
 ### “This will **save me hours** every week”
 
 </div>
 
-<div>
+<div style="--gc:15/21;--gr:1/3;--mgc:1/9;--mgr:3/4">
 
 ### “Instead of going into Servicely and creating orders individually, **this is a blessing**”
 
@@ -228,7 +229,7 @@ One surprise benefit we learned after the MVP was deployed, the interface gave a
 
 ## Process
 
-<figure><img src="/images/missioncontrol/mc-process.webp" alt="Process steps: discovery, define, ideate, test, design" width="2000" height="549" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/mc-process.webp" alt="Process steps: discovery, define, ideate, test, design" width="2000" height="549" loading="lazy" decoding="async"></figure>
 
 ### Team
 
@@ -238,15 +239,15 @@ One surprise benefit we learned after the MVP was deployed, the interface gave a
 
 Initial discovery research goal was to define a consensus workflow that mapped out the process and steps of a synthetic biology DBTL (Design, Build, Test, Learn) cycle, this would simulate a single module of work. I ran multiple workshops that include 3-4 PL’s each. The format of the workshop was for each PL to spend a few minutes mapping their own steps of tasks, communication needs and software needs for each step through a the cycle. Then the group would come together to create an agreed upon workflow, this step was for the purpose of capturing all the use cases and identifying where in the process PL’s needed to complete similar tasks.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/image.webp" alt="DBTL cycle and workflow diagram from the workshop" width="2000" height="1134" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/3;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/image--6.webp" alt="Workshop board of sticky notes mapping a project lead&#x27;s steps" width="2000" height="1125" loading="lazy" decoding="async"></figure>
 
@@ -256,15 +257,15 @@ Initial discovery research goal was to define a consensus workflow that mapped o
 
 Workshop template
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/12;--gr:2/4;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:33.56%">
 
 <figure><img src="/images/missioncontrol/dbtl-1.webp" alt="Project lead DBTL cycle processes captured on sticky notes" width="2000" height="3456" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/3;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:46.19%">
 
 <figure><img src="/images/missioncontrol/image--7.webp" alt="User flow captured from a project lead" width="1480" height="1858" loading="lazy" decoding="async"></figure>
 
@@ -296,7 +297,7 @@ What we learned is that PL’s spent a lot of their time communicating with indi
 
 I then created a very simplified workflow of the DBTL process and outline what parts of the Mission Control tool could apply and add value to the process.
 
-<figure><img src="/images/missioncontrol/image--5.webp" alt="Simplified workflow showing where Mission Control adds value before, during and after a request" width="1346" height="1596" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:7/19;--fw:100.0%;--mgc:1/9;--mfw:48.9%"><img src="/images/missioncontrol/image--5.webp" alt="Simplified workflow showing where Mission Control adds value before, during and after a request" width="1346" height="1596" loading="lazy" decoding="async"></figure>
 
 ### Focused interviews
 
@@ -318,15 +319,15 @@ I also wanted to learn about more of the temporal context of these needs, what i
 
 The analysis consisted of tagging all the hour long interviews with the existing team defined research tags but I also added some custom tags to keep track of specific needs from our Project managers.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/dovetailinterview1.webp" alt="Tagged interview transcripts in Dovetail" width="2000" height="926" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/image--25.webp" alt="Pain points grouped from interview analysis" width="1006" height="1373" loading="lazy" decoding="async"></figure>
 
@@ -334,15 +335,15 @@ The analysis consisted of tagging all the hour long interviews with the existing
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Example of a tagged interview
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Capturing PL’s user flow
 
@@ -362,31 +363,31 @@ Capturing PL’s user flow
 
 #### After importing all the tagged statements onto a board, I started to aligning the tagged statements from each user to start to map out their user flows. I then created a current consensus workflow.
 
-<figure><img src="/images/missioncontrol/userflow2.webp" alt="User flow diagram" width="2000" height="358" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/userflow2.webp" alt="User flow diagram" width="2000" height="358" loading="lazy" decoding="async"></figure>
 
 I then asked all the users that I interviewed to review the workflow to see if I captured everything correctly and asked if they would make edits or add comments. I also asked the users to define where in the workflow delays might occur and the types of delays that regularly happen. I then created a current consensus workflow to share with the team.
 
-<figure><img src="/images/missioncontrol/userflow-consensus.webp" alt="Current consensus workflow" width="2000" height="506" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/userflow-consensus.webp" alt="Current consensus workflow" width="2000" height="506" loading="lazy" decoding="async"></figure>
 
 Then I mapped on top of the workflow the most common delay and the steps need to remedy the issue.
 
-<figure><img src="/images/missioncontrol/userflow-delay1.webp" alt="Consensus workflow with the most common delay and remedy steps highlighted in red" width="2000" height="743" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/userflow-delay1.webp" alt="Consensus workflow with the most common delay and remedy steps highlighted in red" width="2000" height="743" loading="lazy" decoding="async"></figure>
 
 I then mapped out all the steps in the workflow where a delay can occur to show the points of risk.
 
-<figure><img src="/images/missioncontrol/userflow-risk.webp" alt="Workflow with every point of delay marked in red" width="2000" height="490" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/userflow-risk.webp" alt="Workflow with every point of delay marked in red" width="2000" height="490" loading="lazy" decoding="async"></figure>
 
 Next, I synthesized the user needs and pain points and mapped the themes along the workflow, here are a few examples I highlighted for the team.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/painpoints.webp" alt="Pain points grouped by theme" width="2000" height="798" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/userneeds.webp" alt="User needs grouped by theme" width="2000" height="590" loading="lazy" decoding="async"></figure>
 
@@ -394,15 +395,15 @@ Next, I synthesized the user needs and pain points and mapped the themes along t
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Analysis of Pain points
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Analysis of user needs
 
@@ -438,19 +439,19 @@ Analysis of user needs
 
 The benefit of having internal users is that I’m able to quickly get user feedback, from early concepts and wireframes to high fidelity designs. I can review with users and then draft recommendations and concepts to meet with the engineering team to see what solutions are viable, balancing value and development cost.
 
-<figure><img src="/images/missioncontrol/group-19.webp" alt="Early concepts and wireframes" width="2000" height="1134" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/missioncontrol/group-19.webp" alt="Early concepts and wireframes" width="2000" height="1134" loading="lazy" decoding="async"></figure>
 
 Early concepts of thinking through validations of hand-offs between labs as I/O needs.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-1076.webp" alt="Status glyph concepts: progress bars against deadlines" width="1399" height="961" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-133.webp" alt="Concepts for the information shown on an order" width="2000" height="1270" loading="lazy" decoding="async"></figure>
 
@@ -458,15 +459,15 @@ Early concepts of thinking through validations of hand-offs between labs as I/O 
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Early visualization glyph concepts for scan-ability of progress.
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Concepts of what information would be useful for an order.
 
@@ -474,27 +475,27 @@ Concepts of what information would be useful for an order.
 
 </div>
 
-<div class="row gallery cols-4">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:7/8;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-954.webp" alt="Grid of early wireframes" width="2000" height="3377" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:63.7%">
 
 <figure><img src="/images/missioncontrol/group-6.webp" alt="Order detail designs for a campaign" width="2000" height="1821" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-834.webp" alt="User flow of simple scientific workflows" width="2000" height="640" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:17/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-835.webp" alt="Overview of Mission Control user flow screens" width="2000" height="640" loading="lazy" decoding="async"></figure>
 
@@ -502,15 +503,15 @@ Concepts of what information would be useful for an order.
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Starting to visually refine an “Order” and the informational needs.
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Testing what simple scientific workflows would visually look like with considering of screen dimensions and experience.
 
@@ -518,27 +519,27 @@ Testing what simple scientific workflows would visually look like with consideri
 
 </div>
 
-<div class="row gallery cols-4">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:61.75%">
 
 <figure><img src="/images/missioncontrol/group-1069.webp" alt="Wireframe exploration of order cards and dependencies" width="2000" height="1878" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:7/8;--mfw:61.54%">
 
 <figure><img src="/images/missioncontrol/group-1260.webp" alt="Navigation refinements across screens" width="2000" height="1885" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-893.webp" alt="Early Mission Control dashboard with active missions" width="1208" height="1722" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:17/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-1068.webp" alt="Refined navigation with deliverables in a side panel" width="1200" height="1000" loading="lazy" decoding="async"></figure>
 
@@ -546,15 +547,15 @@ Testing what simple scientific workflows would visually look like with consideri
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Decided on a vertical view to avoid horizontal scrolling and applying it to the workspace.
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Refining navigation.
 
@@ -562,21 +563,21 @@ Refining navigation.
 
 </div>
 
-<div class="row gallery cols-3">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-1075.webp" alt="Clickable prototype for A/B testing, annotated in red" width="1208" height="1305" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:4/5;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-936.webp" alt="Interaction and functional requirement specs" width="2000" height="1407" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:2/3;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-890.webp" alt="Order states with annotations" width="1289" height="2628" loading="lazy" decoding="async"></figure>
 
@@ -584,15 +585,15 @@ Refining navigation.
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Exploring interactions within the workspace and interactions for an “order”
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Further refinement of informational needs for each order with dependencies on temporal context.
 
@@ -600,21 +601,21 @@ Further refinement of informational needs for each order with dependencies on te
 
 </div>
 
-<div class="row gallery cols-3">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/3;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-840.webp" alt="Exploring validations for lab-to-lab hand-offs" width="2000" height="1581" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:2/4;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-841.webp" alt="Vertical workspace layout to avoid horizontal scrolling" width="2000" height="2646" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/17;--gr:2/4;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/group-842.webp" alt="Workspace interaction explorations" width="2000" height="4277" loading="lazy" decoding="async"></figure>
 
@@ -622,15 +623,15 @@ Further refinement of informational needs for each order with dependencies on te
 
 </div>
 
-<div class="row cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--mgc:1/9;--mgr:3/4">
 
 Defining the user interactions and functional requirements.
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--mgc:1/9;--mgr:1/2">
 
 Example of building out a clickable prototype for A+B testing.
 
@@ -668,15 +669,15 @@ Here are two examples of the types of user testing we ran pre and post release o
 
 We got the Ok to release the MVP if we added some minor interactions, such as fixing terminology, giving the users the ability to hide paused orders, and visually adding an hierarchy group to the view.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/uat-2.webp" alt="Pre-release UAT spreadsheet of use cases with pass/fail results" width="2000" height="1189" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/uat-3.webp" alt="UAT results with overall go/no-go assessment" width="2000" height="1153" loading="lazy" decoding="async"></figure>
 
@@ -706,15 +707,15 @@ The usability sessions are a team effort, everyone is invited to participate to 
 
 - The last step was to come up with solutions for each of the pain points.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:89.37%">
 
 <figure><img src="/images/missioncontrol/usability-1.webp" alt="Post-release usability notes spreadsheet" width="2000" height="1298" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/usability-2.webp" alt="Usability findings grouped and themed" width="2000" height="842" loading="lazy" decoding="async"></figure>
 
@@ -722,15 +723,15 @@ The usability sessions are a team effort, everyone is invited to participate to 
 
 </div>
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/usability-3.webp" alt="Pain points plotted on an impact versus effort grid" width="2000" height="1316" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/missioncontrol/usability-4.webp" alt="Possible solutions mapped to pain points" width="2000" height="895" loading="lazy" decoding="async"></figure>
 
@@ -746,15 +747,15 @@ The usability sessions are a team effort, everyone is invited to participate to 
 
 I then configured a *Fullstory* dashboard to capture key metrics, we also added inline tags on buttons and links to track specific interactions.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:51.04%">
 
 <figure><img src="/images/missioncontrol/fullstory-mc.webp" alt="Fullstory dashboard: unique users, sessions and active time" width="2000" height="2272" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:2/3;--mfw:51.11%">
 
 <figure><img src="/images/missioncontrol/fullstory-mc-2.webp" alt="Fullstory dashboard: order creation funnel and Mission Control actions" width="2000" height="2269" loading="lazy" decoding="async"></figure>
 

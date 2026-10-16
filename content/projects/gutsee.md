@@ -12,6 +12,7 @@ description: "GutSee: a patient-facing app that helps IBD study participants sub
 thumbnail: "/images/home/homepage-gutsee-2.webp"
 cover: "/images/gutsee/gutsee-home-1.webp"
 links: []
+grid: {"text": "5/21", "mtext": "1/9"}
 ---
 
 ## The background
@@ -42,17 +43,17 @@ User Interface
 
 - Can a user quickly fill out the IBD survey and submit a sample?
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-12-21-39-pm.webp" alt="Diagram: user interface informs user confidence, which shapes user experience and behavior" width="2000" height="1506" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:81.79%;--mgc:1/9;--mfw:76.99%"><img src="/images/gutsee/screenshot-2024-06-10-at-12-21-39-pm.webp" alt="Diagram: user interface informs user confidence, which shapes user experience and behavior" width="2000" height="1506" loading="lazy" decoding="async"></figure>
 
 <hr>
 
 ## The results
 
-<figure><img src="/images/gutsee/gutsee4.webp" alt="GutSee login, home and microbiome sample screens" width="1268" height="861" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/gutsee4.webp" alt="GutSee login, home and microbiome sample screens" width="1268" height="861" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/gutsee-screens.webp" alt="Row of GutSee screens: sample instructions, questionnaire, Fitbit data and microbiome charts" width="2000" height="697" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/gutsee-screens.webp" alt="Row of GutSee screens: sample instructions, questionnaire, Fitbit data and microbiome charts" width="2000" height="697" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-2-06-35-pm.webp" alt="GutSee App Store listing with screenshots" width="2000" height="2729" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-2-06-35-pm.webp" alt="GutSee App Store listing with screenshots" width="2000" height="2729" loading="lazy" decoding="async"></figure>
 
 <hr>
 
@@ -66,19 +67,19 @@ I first reviewed applications in this space as a competitive analysis. The main 
 
 - Medical patient facing apps - to learn the type of content and context to relate medical information to patients, and what literacy level we should be conveying this type of information.
 
-<figure><img src="/images/gutsee/gutsee-apps.webp" alt="Survey of existing IBD, health tracking and patient-facing apps" width="2000" height="463" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/gutsee-apps.webp" alt="Survey of existing IBD, health tracking and patient-facing apps" width="2000" height="463" loading="lazy" decoding="async"></figure>
 
 #### Branding
 
 We ran a brain storming session across the team and with our collaborators, and create a word index to generate ideas.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-06-pm.webp" alt="Naming exploration: word lists and candidate names, with GutSee highlighted" width="2000" height="1679" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-06-pm.webp" alt="Naming exploration: word lists and candidate names, with GutSee highlighted" width="2000" height="1679" loading="lazy" decoding="async"></figure>
 
 The name GutSee won by a few votes as Bowl Owl was a close second. From there I was able to design the logo and logotype for the app. The colors of the logo were taken from the colors of the center.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-11-pm.webp" alt="GutSee logo, combining &quot;Microbiome&quot; and &quot;Observation&quot;" width="2000" height="1128" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-11-pm.webp" alt="GutSee logo, combining &quot;Microbiome&quot; and &quot;Observation&quot;" width="2000" height="1128" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-16-pm.webp" alt="GutSee logo detail: the gut-shaped symbol mirrors the &quot;g&quot; and adds intestinal folds" width="2000" height="866" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:15/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-12-22-16-pm.webp" alt="GutSee logo detail: the gut-shaped symbol mirrors the &quot;g&quot; and adds intestinal folds" width="2000" height="866" loading="lazy" decoding="async"></figure>
 
 ### The data
 
@@ -110,7 +111,7 @@ Patients had to submit weekly samples to obtain a baseline for their microbiome,
 
 - Abundance of bacteria per sample
 
-<figure><img src="/images/gutsee/data.webp" alt="Comparison of survey, fitness and microbiome data by collection frequency and return time" width="2000" height="711" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/data.webp" alt="Comparison of survey, fitness and microbiome data by collection frequency and return time" width="2000" height="711" loading="lazy" decoding="async"></figure>
 
 Returning data to the patients was the easy part, we can design any interface with any interactivity to answer all user needs. BUT the hard part was obtaining the data and the unknown frequency of it… how can we keep users engaged by returning useful data when we won’t know when we would have data to return? We can immediately return Fitbit data, but that’s the true value for our users. The true value was the data from the survey and microbiome samples, and these relied heavily on patient participation. On top of patient participation, the microbiome data to be cost effective for the lab running the study, we’d need to obtain 384 sample to sequence the samples. So for example if we had a minority of very involved patients and a majority of occasionally involved patients, the diligent patients will still need to wait for their data to be returned.
 
@@ -118,7 +119,7 @@ Returning data to the patients was the easy part, we can design any interface wi
 
 We designed the app around the HOOKED Method of variable rewards:
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-1-47-39-pm.webp" alt="Hook model for engagement: trigger, action, variable reward and investment" width="2000" height="1013" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-1-47-39-pm.webp" alt="Hook model for engagement: trigger, action, variable reward and investment" width="2000" height="1013" loading="lazy" decoding="async"></figure>
 
 From the onset of the development process, we request content from the researchers and clinicians, this would give us time to create enough content to deliver variable rewards until we would be able to return their own microbiome data to the users. We were just buying time to get enough samples to sequence the first run.
 
@@ -134,25 +135,25 @@ So the types of variable reward content we were writing:
 
 We also planned a timed-release of features, starting with on-boarding materials and then slowly introducing functionality and features of the application.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-35-pm.webp" alt="Timeline of study weeks mapping when participants receive surveys, samples and results" width="2000" height="1617" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:71.72%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-35-pm.webp" alt="Timeline of study weeks mapping when participants receive surveys, samples and results" width="2000" height="1617" loading="lazy" decoding="async"></figure>
 
 <hr>
 
 ## The design
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-53-pm.webp" alt="GutSee V2 sitemap" width="2000" height="1494" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-53-pm.webp" alt="GutSee V2 sitemap" width="2000" height="1494" loading="lazy" decoding="async"></figure>
 
 Here’s an example of planning the site architecture to review with the stakeholders. Once we got the go ahead with the plan, and lots of sketching ideas with the team.
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/10;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:100.0%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-2-32-50-pm.webp" alt="Whiteboard sketch of the app&#x27;s information architecture" width="2000" height="2259" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:10/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:2/3;--mfw:100.0%">
 
 <figure><img src="/images/gutsee/gutsee-whiteboard.webp" alt="Digital whiteboard of early concepts and screen sketches" width="2000" height="971" loading="lazy" decoding="async"></figure>
 
@@ -162,17 +163,17 @@ Here’s an example of planning the site architecture to review with the stakeho
 
 After initial sketches, time for digital sketches. Since this was mobile design, we had to familiarize ourselves with AppKit and touch interactions. We also experimented with light and dark modes and selected a color palette to visualize the data that would work independently from either of the modes and still pass accessibility test.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-26-20-pm.webp" alt="Figma canvas showing the full set of GutSee screens" width="2000" height="1803" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-26-20-pm.webp" alt="Figma canvas showing the full set of GutSee screens" width="2000" height="1803" loading="lazy" decoding="async"></figure>
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:80.95%;--mgc:1/9;--mgr:1/2;--mfw:59.19%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-30-37-pm.webp" alt="Fitbit summary screen spec: rolling 7-day averages for steps, heart rate, active minutes and sleep" width="2000" height="1959" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:84.67%;--mgc:1/9;--mgr:3/4;--mfw:61.92%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-31-05-pm.webp" alt="Microbiome data screens: stacked bars across samples and a donut chart for one sample" width="2000" height="1873" loading="lazy" decoding="async"></figure>
 
@@ -180,15 +181,15 @@ After initial sketches, time for digital sketches. Since this was mobile design,
 
 </div>
 
-<div class="row gallery cols-2">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:93.68%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-30-43-pm.webp" alt="Data intake process document for Fitbit data, with highlighted responsibilities" width="2000" height="1238" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:99.64%;--mgc:1/9;--mgr:3/4;--mfw:72.86%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-31-15-pm.webp" alt="Data intake process document for microbiome samples, with an example record" width="2000" height="1592" loading="lazy" decoding="async"></figure>
 
@@ -198,27 +199,27 @@ After initial sketches, time for digital sketches. Since this was mobile design,
 
 I even designed the user experience of the on-boarding materials and explainers. My background as an illustrator came in handy and I was able to create all the graphics for the materials.
 
-<div class="row gallery cols-4">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/10;--gr:1/2;--fw:96.84%;--mgc:1/9;--mgr:1/2;--mfw:66.44%">
 
 <figure><img src="/images/gutsee/how-to-submit-a-sample_1_collection.webp" alt="Illustration: stool collection device placed on a toilet seat" width="2000" height="1745" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:10/15;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:89.72%">
 
 <figure><img src="/images/gutsee/how-to-submit-a-sample_2_tubes.webp" alt="Illustration: sample tubes labeled P (with preservative) and N (without)" width="2000" height="1293" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:15/18;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:4/5;--mfw:100.0%">
 
 <figure><img src="/images/gutsee/how-to-submit-a-sample_3_bag1.webp" alt="Illustration: specimen bag 1 with biohazard label" width="2000" height="3423" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:18/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:5/6;--mfw:100.0%">
 
 <figure><img src="/images/gutsee/how-to-submit-a-sample_4_bag2.webp" alt="Illustration: specimen bag 2 with biohazard label and QR code" width="2000" height="3431" loading="lazy" decoding="async"></figure>
 
@@ -228,31 +229,31 @@ I even designed the user experience of the on-boarding materials and explainers.
 
 The developers and I spent a lot of time iterating through the visualizations. Here’s an example of the type of questions we were trying to answer.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-40-pm.webp" alt="Design question: how many bars to show at once, beside a stacked bar chart screen" width="2000" height="1075" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/19;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-40-pm.webp" alt="Design question: how many bars to show at once, beside a stacked bar chart screen" width="2000" height="1075" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-49-pm.webp" alt="Design question: keeping colors consistent across samples for the top 7 bacteria" width="2000" height="1098" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/19;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-49-pm.webp" alt="Design question: keeping colors consistent across samples for the top 7 bacteria" width="2000" height="1098" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-54-pm.webp" alt="Design question: handling a bacterium not in the color map" width="2000" height="956" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/18;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-33-54-pm.webp" alt="Design question: handling a bacterium not in the color map" width="2000" height="956" loading="lazy" decoding="async"></figure>
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-01-pm.webp" alt="Design question: what the page looks like when a patient has not submitted data" width="2000" height="1133" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/19;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-01-pm.webp" alt="Design question: what the page looks like when a patient has not submitted data" width="2000" height="1133" loading="lazy" decoding="async"></figure>
 
 Examples of visualizations ideas we tried for showing abundance of bacteria.
 
-<div class="row gallery cols-3">
+<div class="row placed">
 
-<div>
+<div style="--gc:5/9;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:1/2;--mfw:30.87%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-08-pm.webp" alt="Microbiome Overview as a stacked area chart" width="804" height="1510" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:9/13;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:2/3;--mfw:30.07%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-08-pm-2.webp" alt="Microbiome Overview area chart variant with a muted palette" width="783" height="1510" loading="lazy" decoding="async"></figure>
 
 </div>
 
-<div>
+<div style="--gc:13/21;--gr:1/2;--fw:100.0%;--mgc:1/9;--mgr:3/4;--mfw:100.0%">
 
 <figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-35-05-pm.webp" alt="Exploring donut and bubble charts against the underlying family-level spreadsheet" width="1996" height="1954" loading="lazy" decoding="async"></figure>
 
@@ -262,4 +263,4 @@ Examples of visualizations ideas we tried for showing abundance of bacteria.
 
 The solution we decided on.
 
-<figure><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-14-pm.webp" alt="Bubble matrix concept with notes: not dependent on color, scalable, intuitive" width="2000" height="1032" loading="lazy" decoding="async"></figure>
+<figure class="placed" style="--gc:5/21;--fw:100.0%;--mgc:1/9;--mfw:100.0%"><img src="/images/gutsee/screenshot-2024-06-10-at-3-34-14-pm.webp" alt="Bubble matrix concept with notes: not dependent on color, scalable, intuitive" width="2000" height="1032" loading="lazy" decoding="async"></figure>

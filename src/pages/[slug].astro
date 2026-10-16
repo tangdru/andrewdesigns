@@ -17,6 +17,7 @@ const { project, next } = Astro.props;
 const { data } = project;
 const { Content } = await render(project);
 const meta = [data.org, data.year].filter(Boolean).join(' · ');
+const gridVars = data.grid ? `--text:${data.grid.text};--mtext:${data.grid.mtext}` : undefined;
 ---
 <Base title={data.title} description={data.description} image={`/og/${project.id}.png`}>
   <article>
@@ -32,7 +33,7 @@ const meta = [data.org, data.year].filter(Boolean).join(' · ');
         <img src={url(data.cover)} alt="" fetchpriority="high" decoding="async" />
       </div>
     )}
-    <div class="wrap">
+    <div class="page-grid" style={gridVars}>
       <header class="head">
         <p class="eyebrow">{data.eyebrow}</p>
         <h1>{data.title}</h1>
@@ -44,9 +45,11 @@ const meta = [data.org, data.year].filter(Boolean).join(' · ');
           </ul>
         )}
       </header>
-      <div class="prose">
-        <Content />
-      </div>
+    </div>
+    <div class="prose page-grid" style={gridVars}>
+      <Content />
+    </div>
+    <div class="page-grid" style={gridVars}>
       <nav class="next" aria-label="Next case study">
         <a href={url(`/${next.id}`)}>
           <span class="eyebrow">Next</span>
@@ -61,13 +64,13 @@ const meta = [data.org, data.year].filter(Boolean).join(' · ');
   .cover { background: var(--color-wash); }
   .cover img { width: 100%; max-height: 70vh; object-fit: cover; }
   .cover--video video { display: block; width: 100%; max-width: calc(70vh * 16 / 9); margin-inline: auto; }
-  .head { max-width: var(--measure); margin: var(--space-6) auto var(--space-5); margin-left: max(0px, calc((100% - var(--content-max)) / 2)); }
+  .head { margin-block: var(--space-6) var(--space-5); }
   h1 { font-size: var(--size-h1); margin-top: var(--space-2); }
   .summary { font-size: 1.25rem; margin: var(--space-3) 0 0; }
   .meta { color: var(--color-ink-muted); font-size: var(--size-small); margin: var(--space-3) 0 0; }
   .links { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
   .links a { font-weight: var(--weight-regular); }
-  .next { max-width: var(--content-max); margin: var(--space-7) auto 0; border-top: 1px solid var(--color-rule); padding-top: var(--space-4); }
+  .next { margin-top: var(--space-7); border-top: 1px solid var(--color-rule); padding-top: var(--space-4); }
   .next a { display: inline-flex; flex-direction: column; text-decoration: none; }
   .next-title { font-size: var(--size-h2); }
   .next a:hover .next-title { text-decoration: underline; text-decoration-color: var(--color-accent); }
