@@ -11,18 +11,20 @@
   --color-accent-2: hsl(218 43% 52%);    /* #4F75BA blue */
   --color-focus: hsl(218 43% 45%);
 
-  /* Type. Halyard Display was licensed through Squarespace; Figtree is a free
-     stand-in. Swap the family here if you set up an Adobe Fonts web project. */
-  --font-sans: 'Figtree Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Type: Halyard Display, as on the Squarespace site. Loaded from Andrew's
+     Adobe Fonts web project ("typekit" in content/site.json); Figtree is the
+     fallback until that kit is set. */
+  --font-sans: 'halyard-display', 'Figtree Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --weight-light: 300;
   --weight-regular: 400;
   --weight-medium: 500;
-  --tracking-body: 0.02em;
-  --tracking-heading: 0.01em;
-  --leading-body: 1.6;
-  --leading-heading: 1.2;
+  --weight-bold: 700;
+  --tracking-body: 0.05em;
+  --tracking-heading: 0.02em;
+  --leading-body: 1.4;
+  --leading-heading: 1.4;
 
-  --size-display: clamp(2rem, 1.2rem + 3.2vw, 3.4rem);
+  --size-display: clamp(2.2rem, 1.4rem + 3.2vw, 3.4rem);
   --size-h1: clamp(2rem, 1.5rem + 2vw, 3rem);
   --size-h2: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem);
   --size-h3: 1.4rem;

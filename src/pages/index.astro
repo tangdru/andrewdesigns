@@ -40,11 +40,11 @@ const sections = site.sections.map((s) => ({
 <style>
   .intro {
     font-size: var(--size-display);
-    line-height: 1.25;
+    line-height: var(--leading-heading);
     max-width: 22em;
     margin: var(--space-6) 0 var(--space-6);
   }
-  .intro :global(strong) { color: var(--color-accent-text); font-weight: var(--weight-medium); }
+  .intro :global(strong) { color: var(--color-accent); font-weight: var(--weight-bold); }
 
   .work { border-top: 1px solid var(--color-rule); padding-top: var(--space-3); margin-top: var(--space-5); }
   .work h2 { font-size: var(--size-h3); margin-bottom: var(--space-4); }

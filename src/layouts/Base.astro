@@ -16,6 +16,8 @@ const { title, description, image = '/og/default.png' } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.author}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(url(image), Astro.site).href;
+// Adobe Fonts web project ID (e.g. "abc1def"), for Halyard Display.
+const typekit = (site as { typekit?: string }).typekit?.trim();
 ---
 <!doctype html>
 <html lang="en">
@@ -27,6 +29,8 @@ const ogImage = new URL(url(image), Astro.site).href;
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
+    {typekit && <link rel="preconnect" href="https://use.typekit.net" crossorigin />}
+    {typekit && <link rel="stylesheet" href={`https://use.typekit.net/${typekit}.css`} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={fullTitle} />

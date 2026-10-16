@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--tracking-heading);
   margin: 0;
 }
-strong, b { font-weight: var(--weight-medium); }
+strong, b { font-weight: var(--weight-bold); }
 
 .skip-link {
   position: absolute; left: var(--space-3); top: -4rem;
