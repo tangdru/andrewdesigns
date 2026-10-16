@@ -111,6 +111,17 @@ strong, b { font-weight: var(--weight-bold); }
   .prose .row.split:not(.placed) { align-items: center; }
 }
 
+/* Masonry galleries (Visual design). Muuri positions items when JS runs
+   (.is-muuri); without JS they wrap in rows at the same widths. */
+.prose > .masonry { grid-column: 1 / -1; position: relative; margin-inline: calc(var(--grid-gap) / -2); }
+.masonry:not(.is-muuri) { display: flex; flex-wrap: wrap; align-items: flex-start; }
+.masonry-item { width: 50%; padding: calc(var(--grid-gap) / 2); margin: 0; }
+.is-muuri .masonry-item { position: absolute; z-index: 1; }
+@media (min-width: 768px) {
+  .prose > .masonry { grid-column: var(--gallery, 4 / 22); }
+  .masonry-item { width: 33.333%; }
+}
+
 /* Linked images (e.g. gallery tiles linking to case studies) */
 .prose figure a { display: block; overflow: hidden; }
 .prose figure a img { transition: transform var(--duration-base) var(--ease-out); }

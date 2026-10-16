@@ -21,6 +21,25 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
   </div>
 </Base>
 
+<script>
+  import Muuri from 'muuri';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('.masonry').forEach((el) => {
+    el.classList.add('is-muuri');
+    const grid = new Muuri(el, {
+      items: '.masonry-item',
+      layoutDuration: reduceMotion ? 0 : 400,
+      layoutEasing: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+      layoutOnResize: 150,
+    });
+    // Images carry width/height so sizes are known up front; re-measure once loaded anyway.
+    el.querySelectorAll('img').forEach((img) => {
+      if (!img.complete) img.addEventListener('load', () => grid.refreshItems().layout(), { once: true });
+    });
+  });
+</script>
+
 <style>
   .cover { background: var(--color-wash); }
   .cover img { width: 100%; max-height: 60vh; object-fit: cover; }

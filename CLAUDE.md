@@ -26,6 +26,9 @@ designer; the site is itself a portfolio piece, so craft matters.
   `placed` figure or row cell carries its original columns (`--gc`/`--mgc`,
   rows `--gr`/`--mgr`) and the share of its cell the image filled
   (`--fw`/`--mfw`); frontmatter `grid.text` sets the page's text column.
+  Visual design galleries use `<div class="masonry">` of
+  `<figure class="masonry-item">`, laid out by Muuri (script in
+  `src/pages/visual-design.astro`; wraps in rows without JS).
 - `content/pages/*.md`, `content/resume.md`, `content/publications.json`,
   `content/site.json` (nav, home intro); `content/drafts/` is not rendered
 - `src/content.config.ts`: collection schemas
