@@ -27,18 +27,59 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
   import Muuri from 'muuri';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motion = (ms: number) => (reduceMotion ? 0 : ms);
+  const easing = 'cubic-bezier(0.2, 0.7, 0.2, 1)';
+
   document.querySelectorAll<HTMLElement>('.masonry').forEach((el) => {
     el.classList.add('is-muuri');
     const grid = new Muuri(el, {
       items: '.masonry-item',
-      layoutDuration: reduceMotion ? 0 : 400,
-      layoutEasing: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+      layoutDuration: motion(400),
+      layoutEasing: easing,
+      showDuration: motion(300),
+      showEasing: easing,
+      hideDuration: motion(200),
+      hideEasing: easing,
+      visibleStyles: { opacity: '1', transform: 'scale(1)' },
+      hiddenStyles: { opacity: '0', transform: 'scale(0.96)' },
       layoutOnResize: 150,
     });
     // Images carry width/height so sizes are known up front; re-measure once loaded anyway.
     el.querySelectorAll('img').forEach((img) => {
       if (!img.complete) img.addEventListener('load', () => grid.refreshItems().layout(), { once: true });
     });
+
+    // Filter buttons (and their source-material notes) sit before the gallery in the content.
+    const bar = document.querySelector<HTMLElement>('.filters');
+    if (!bar) return;
+    const buttons = [...bar.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const notes = [...document.querySelectorAll<HTMLElement>('.filter-note')];
+    const status = document.createElement('p');
+    status.className = 'visually-hidden';
+    status.setAttribute('role', 'status');
+    bar.append(status);
+
+    const apply = (key: string, announce = true) => {
+      if (!buttons.some((b) => b.dataset.filter === key)) key = 'all';
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === key)));
+      notes.forEach((n) => (n.hidden = n.dataset.category !== key));
+      grid.filter((item) => key === 'all' || item.getElement()?.dataset.category === key);
+      if (announce) {
+        const label = buttons.find((b) => b.dataset.filter === key)?.textContent;
+        const count = grid.getItems().filter((i) => i.isActive()).length;
+        status.textContent = `${label}: ${count} images`;
+      }
+    };
+
+    buttons.forEach((b) =>
+      b.addEventListener('click', () => {
+        const key = b.dataset.filter!;
+        history.replaceState(null, '', key === 'all' ? location.pathname + location.search : `#${key}`);
+        apply(key);
+      }),
+    );
+    bar.hidden = false;
+    apply(location.hash.slice(1) || 'all', false);
   });
 </script>
 

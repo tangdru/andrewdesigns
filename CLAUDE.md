@@ -27,8 +27,10 @@ designer; the site is itself a portfolio piece, so craft matters.
   rows `--gr`/`--mgr`) and the share of its cell the image filled
   (`--fw`/`--mfw`); frontmatter `grid.text` sets the page's text column.
   Visual design galleries use `<div class="masonry">` of
-  `<figure class="masonry-item">`, laid out by Muuri (script in
-  `src/pages/visual-design.astro`; wraps in rows without JS).
+  `<figure class="masonry-item" data-category="…">`, laid out by Muuri (script
+  in `src/pages/visual-design.astro`; wraps in rows without JS). The
+  `.filters` buttons (`data-filter`) and `.filter-note` blocks above the
+  gallery filter it by category (URL hash keeps the filter).
 - `content/pages/*.md`, `content/resume.md`, `content/publications.json`,
   `content/site.json` (nav, home intro); `content/drafts/` is not rendered
 - `src/content.config.ts`: collection schemas

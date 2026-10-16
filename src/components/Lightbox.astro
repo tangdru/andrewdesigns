@@ -29,23 +29,28 @@
     lightbox.init();
 
     const buttons: HTMLButtonElement[] = [];
-    const dataSource = () =>
-      imgs.map((img, i) => ({
+    // Only images currently shown (a filtered-out gallery item is skipped).
+    const visible = () => imgs.filter((img) => !img.closest('.muuri-item-hidden'));
+    const dataSource = (list: HTMLImageElement[]) =>
+      list.map((img) => ({
         src: img.currentSrc || img.src,
         width: img.naturalWidth || Number(img.getAttribute('width')) || 1600,
         height: img.naturalHeight || Number(img.getAttribute('height')) || 1200,
         alt: img.alt,
-        element: buttons[i],
+        element: buttons[imgs.indexOf(img)],
       }));
 
-    imgs.forEach((img, i) => {
+    imgs.forEach((img) => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'zoom';
       button.setAttribute('aria-label', img.alt ? `View larger: ${img.alt}` : 'View larger image');
       img.replaceWith(button);
       button.append(img);
-      button.addEventListener('click', () => lightbox.loadAndOpen(i, dataSource()));
+      button.addEventListener('click', () => {
+        const list = visible();
+        lightbox.loadAndOpen(list.indexOf(img), dataSource(list));
+      });
       buttons.push(button);
     });
   }
