@@ -6,8 +6,8 @@
   "linkedin": "https://www.linkedin.com/in/andrew-designs/",
   "ga4": "G-8MQCDDG84P",
   "typekit": "",
-  "description": "Andrew Tang is a product UX and data-visualization designer working at the intersection of design and data.",
-  "intro": "Hi, I’m Andrew and I work at the **intersection of design + data**, currently designing user-centered tools for exploring data to discover insights, uncover trends, and enable data-driven decisions.",
+  "description": "Andrew Tang is a product designer at the intersection of design and data, building data tools and human-in-the-loop AI workflows as working software.",
+  "intro": "Hi, I’m Andrew and I work at the **intersection of design + data**, designing user-centered tools for exploring data to discover insights, uncover trends, and enable data-driven decisions. I use AI to ship them as working software, and I’m currently designing human-in-the-loop agentic workflows.",
   "sections": [
     { "title": "UX/UI case studies", "category": "ux" },
     { "title": "Data visualization case studies", "category": "dataviz" }
