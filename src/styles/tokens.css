@@ -53,5 +53,7 @@
   /* Motion */
   --duration-fast: 150ms;
   --duration-base: 300ms;
+  --duration-slow: 550ms;
+  --scale-hidden: 0.5;       /* filtered-out gallery items shrink toward this */
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 }

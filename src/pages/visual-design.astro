@@ -27,21 +27,28 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
   import Muuri from 'muuri';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const motion = (ms: number) => (reduceMotion ? 0 : ms);
-  const easing = 'cubic-bezier(0.2, 0.7, 0.2, 1)';
+  const token = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  // Durations may come back minified as seconds (550ms → .55s).
+  const ms = (name: string) => {
+    const v = token(name);
+    return reduceMotion ? 0 : parseFloat(v) * (v.endsWith('ms') ? 1 : 1000);
+  };
+  const easing = token('--ease-out');
 
   document.querySelectorAll<HTMLElement>('.masonry').forEach((el) => {
     el.classList.add('is-muuri');
     const grid = new Muuri(el, {
       items: '.masonry-item',
-      layoutDuration: motion(400),
+      // Filtering: the rest of the grid glides into place while items
+      // leaving shrink and fade out, and items arriving grow and fade in.
+      layoutDuration: ms('--duration-slow'),
       layoutEasing: easing,
-      showDuration: motion(300),
+      showDuration: ms('--duration-slow'),
       showEasing: easing,
-      hideDuration: motion(200),
+      hideDuration: ms('--duration-base'),
       hideEasing: easing,
       visibleStyles: { opacity: '1', transform: 'scale(1)' },
-      hiddenStyles: { opacity: '0', transform: 'scale(0.96)' },
+      hiddenStyles: { opacity: '0', transform: `scale(${token('--scale-hidden')})` },
       layoutOnResize: 150,
     });
     // Images carry width/height so sizes are known up front; re-measure once loaded anyway.
@@ -74,6 +81,8 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
     buttons.forEach((b) =>
       b.addEventListener('click', () => {
         const key = b.dataset.filter!;
+        // Lazy images further down the page would arrive blank; fetch them now.
+        el.querySelectorAll('img[loading="lazy"]').forEach((img) => img.setAttribute('loading', 'eager'));
         history.replaceState(null, '', key === 'all' ? location.pathname + location.search : `#${key}`);
         apply(key);
       }),
