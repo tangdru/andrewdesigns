@@ -23,7 +23,7 @@
   --tracking-heading: 0.02em;
   --leading-body: 1.4;
   --leading-heading: 1.4;
-  --leading-display: 1.2;    /* home intro */
+  --leading-display: 1.3;    /* home intro */
 
   --size-display: clamp(2.2rem, 1.4rem + 3.2vw, 3.4rem);
   --size-h1: clamp(2rem, 1.5rem + 2vw, 3rem);

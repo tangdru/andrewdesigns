@@ -42,7 +42,10 @@ const sections = site.sections.map((s) => ({
     font-size: var(--size-display);
     line-height: var(--leading-display);
     max-width: 22em;
-    margin: var(--space-6) 0 var(--space-6);
+    margin: var(--space-4) 0 var(--space-6);
+  }
+  @media (min-width: 720px) {
+    .intro { margin-top: var(--space-5); }
   }
   .intro :global(strong) { color: var(--color-accent); font-weight: var(--weight-bold); }
 
