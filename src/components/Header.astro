@@ -9,7 +9,7 @@ const isCurrent = (href: string) =>
 <header class="site-header">
   <div class="bar">
     <a class="wordmark" href={url('/')} aria-label={`${site.name}, home`}>
-      Andrew designs<span class="dot" aria-hidden="true">.</span>
+      Andrew des<span class="i">i</span>gns<span class="dot" aria-hidden="true">.</span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="visually-hidden">Menu</span>
@@ -56,6 +56,11 @@ const isCurrent = (href: string) =>
   }
   .wordmark { font-size: 1.75rem; font-weight: var(--weight-regular); letter-spacing: 0; text-decoration: none; line-height: 1.2; padding-block: var(--space-2); }
   .dot { color: var(--color-accent); }
+  /* Gold tittle on the i, as in the original logo: a gold i under a dotless ı in ink */
+  .i { position: relative; color: transparent; }
+  .i::before, .i::after { position: absolute; left: 0; top: 0; }
+  .i::before { content: 'i'; color: var(--color-accent); clip-path: inset(0 0 55% 0); }
+  .i::after { content: 'ı'; color: var(--color-ink); }
   ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0 var(--space-4); align-items: center; }
   nav a { text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; }
   nav a:hover, nav a[aria-current='page'] { text-decoration: underline; text-decoration-color: var(--color-accent); }
