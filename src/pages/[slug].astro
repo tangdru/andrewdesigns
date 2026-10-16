@@ -20,7 +20,14 @@ const meta = [data.org, data.year].filter(Boolean).join(' · ');
 ---
 <Base title={data.title} description={data.description} image={`/og/${project.id}.png`}>
   <article>
-    {data.cover && (
+    {data.cover_video ? (
+      <div class="cover cover--video">
+        <video controls playsinline preload="metadata" width="1280" height="720"
+          poster={url(data.cover_video.replace(/\.mp4$/, '.webp'))} aria-label={data.cover_video_label}>
+          <source src={url(data.cover_video)} type="video/mp4" />
+        </video>
+      </div>
+    ) : data.cover && (
       <div class="cover">
         <img src={url(data.cover)} alt="" fetchpriority="high" decoding="async" />
       </div>
@@ -53,6 +60,7 @@ const meta = [data.org, data.year].filter(Boolean).join(' · ');
 <style>
   .cover { background: var(--color-wash); }
   .cover img { width: 100%; max-height: 70vh; object-fit: cover; }
+  .cover--video video { display: block; width: 100%; max-width: calc(70vh * 16 / 9); margin-inline: auto; }
   .head { max-width: var(--measure); margin: var(--space-6) auto var(--space-5); margin-left: max(0px, calc((100% - var(--content-max)) / 2)); }
   h1 { font-size: var(--size-h1); margin-top: var(--space-2); }
   .summary { font-size: 1.25rem; margin: var(--space-3) 0 0; }

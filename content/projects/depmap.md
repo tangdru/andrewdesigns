@@ -10,10 +10,11 @@ featured: true
 description: "Designing the DepMap portal at the Broad Institute: a data portal for exploring cancer dependencies and discovering biomarkers for cancer therapeutics."
 thumbnail: "/images/home/homepage-depmap-3.webp"
 cover: "/images/home/homepage-depmap-3.webp"
+cover_video: "/videos/depmap/portal-release.mp4"
+cover_video_label: "DepMap portal release video: tour of the portal"
 links: [{"label": "DepMap portal", "url": "https://depmap.org/portal/"}]
 ---
 
-<figure><video controls preload="none" playsinline width="1280" height="720" poster="/videos/depmap/portal-release.webp" aria-label="DepMap portal release video: tour of the portal"><source src="/videos/depmap/portal-release.mp4" type="video/mp4"></video></figure>
 
 ## The background
 
