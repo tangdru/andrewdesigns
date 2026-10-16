@@ -19,10 +19,10 @@ The domain is registered at Squarespace (migrated from Google Domains).
 1. In Squarespace **Domains → andrewdesigns.info → DNS**, screenshot every
    record first, especially any MX/SPF/DKIM email records. Keep those.
 2. A day ahead, lower the TTL on the records you will change.
-3. Add the custom domain to the repo: create `public/CNAME` containing
-   `www.andrewdesigns.info` and push. (The workflow switches the base path
-   to `/` when this file exists.) Then in **Settings → Pages → Custom
-   domain**, enter `www.andrewdesigns.info`.
+3. In **Settings → Pages → Custom domain**, enter `www.andrewdesigns.info`
+   and save, then re-run the latest "Deploy to GitHub Pages" workflow. The
+   workflow asks GitHub where the site is served and builds for that address
+   automatically (no CNAME file needed).
 4. In Squarespace DNS, remove the Squarespace website records for `www` and
    the apex (`@`), and add:
    - `www` CNAME → `tangdru.github.io`

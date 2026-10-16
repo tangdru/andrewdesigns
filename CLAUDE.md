@@ -31,7 +31,8 @@ designer; the site is itself a portfolio piece, so craft matters.
   `src/plugins/rehype-base.mjs` and `url()` add the base path.
 - `npm run build` must pass before pushing. `BASE_PATH=/andrewdesigns npm run
   build` reproduces the GitHub Pages preview build.
-- Deploy: `.github/workflows/deploy.yml`; cutover steps in `docs/cutover.md`.
+- Deploy: `.github/workflows/deploy.yml` (base path comes from the Pages
+  settings via configure-pages); cutover steps in `docs/cutover.md`.
 
 ## Rules
 

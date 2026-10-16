@@ -24,17 +24,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # Until public/CNAME exists the site is served at <user>.github.io/<repo>/,
-      # so build with that base path. Adding public/CNAME switches to the custom domain.
+      # Ask GitHub where Pages serves this site: tangdru.github.io/andrewdesigns
+      # (base /andrewdesigns) or the custom domain set in Settings → Pages (base /).
+      - id: pages
+        uses: actions/configure-pages@v5
       - name: Set base path
         run: |
-          if [ -f public/CNAME ]; then
-            echo "BASE_PATH=/" >> "$GITHUB_ENV"
-            echo "SITE_URL=https://$(cat public/CNAME)" >> "$GITHUB_ENV"
-          else
-            echo "BASE_PATH=/${GITHUB_REPOSITORY#*/}" >> "$GITHUB_ENV"
-            echo "SITE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io" >> "$GITHUB_ENV"
-          fi
+          echo "BASE_PATH=${{ steps.pages.outputs.base_path }}/" >> "$GITHUB_ENV"
+          echo "SITE_URL=${{ steps.pages.outputs.origin }}" >> "$GITHUB_ENV"
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
