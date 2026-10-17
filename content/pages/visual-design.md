@@ -62,37 +62,17 @@ Visualizing cartographic time-series data
 <button type="button" data-filter="books" aria-pressed="false">Book design</button>
 </div>
 
-<div class="filter-note" data-category="dataviz">
+<div class="masonry">
+
+<div class="masonry-item masonry-head" data-category="dataviz"><div>
+
+##### Data visualization
 
 **Source materials:** raw data  
 **Visualized with:** D3, Processing, Python, Plotly, Tableau  
 **Final rendering:** Adobe Illustrator or Photoshop
 
-</div>
-
-<div class="filter-note" data-category="illustration">
-
-**Source materials:** primary scientific research, EM images, 3d renderings, reference art.  
-**Final rendering:** Adobe Illustrator
-
-</div>
-
-<div class="filter-note" data-category="graphic">
-
-**Source materials:** stock photos, photography, 3d renderings, data visualizations, illustrations  
-**Final rendering:** Photoshop
-
-</div>
-
-<div class="filter-note" data-category="books">
-
-**Source materials:** stock photos, photography, copy  
-**Final rendering:** Adobe Photoshop and InDesign  
-Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of Design*
-
-</div>
-
-<div class="masonry">
+</div></div>
 
 <figure class="masonry-item" data-category="dataviz"><img src="/images/visual-design/bottledwater.webp" alt="&quot;The Bottled Water Cycle&quot; infographic" width="2000" height="800" loading="lazy" decoding="async"></figure>
 
@@ -109,6 +89,15 @@ Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of
 <figure class="masonry-item" data-category="dataviz"><img src="/images/visual-design/pollution_final_printready-1-copy.webp" alt="&quot;Pollution&quot; infographic covering air, ocean and land" width="2000" height="3040" loading="lazy" decoding="async"></figure>
 
 <figure class="masonry-item" data-category="dataviz"><img src="/images/visual-design/andrew-tang_neu2015_countrydatakenya-copy.webp" alt="Kenya country data profile with population, timeline, energy and GDP charts" width="2000" height="2000" loading="lazy" decoding="async"></figure>
+
+<div class="masonry-item masonry-head" data-category="illustration"><div>
+
+##### Scientific illustration
+
+**Source materials:** primary scientific research, EM images, 3d renderings, reference art.  
+**Final rendering:** Adobe Illustrator
+
+</div></div>
 
 <figure class="masonry-item" data-category="illustration"><img src="/images/visual-design/tips_histones-copy.webp" alt="Histones illustration: writing, erasing and reading enzymes" width="501" height="528" loading="lazy" decoding="async"></figure>
 
@@ -131,6 +120,15 @@ Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of
 <figure class="masonry-item" data-category="illustration"><img src="/images/visual-design/cell4392-1.webp" alt="Cell SnapShot: Formation of mRNPs" width="1206" height="1566" loading="lazy" decoding="async"></figure>
 
 <figure class="masonry-item" data-category="illustration"><img src="/images/visual-design/cell4334-1.webp" alt="Cell SnapShot: Centriole Biogenesis" width="1206" height="1566" loading="lazy" decoding="async"></figure>
+
+<div class="masonry-item masonry-head" data-category="graphic"><div>
+
+##### Graphic design
+
+**Source materials:** stock photos, photography, 3d renderings, data visualizations, illustrations  
+**Final rendering:** Photoshop
+
+</div></div>
 
 <figure class="masonry-item" data-category="graphic"><img src="/images/visual-design/cover-tif.webp" alt="Chem journal cover, Volume 1 Number 1" width="590" height="768" loading="lazy" decoding="async"></figure>
 
@@ -155,6 +153,16 @@ Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of
 <figure class="masonry-item" data-category="graphic"><img src="/images/visual-design/cell-cover.webp" alt="Cell cover, &quot;Mutation Storms in Cancer Genomes&quot;: scattered colored dots" width="591" height="768" loading="lazy" decoding="async"></figure>
 
 <figure class="masonry-item" data-category="graphic"><img src="/images/visual-design/cellaniversary1.webp" alt="Cell 40th anniversary cover with an electron micrograph" width="591" height="768" loading="lazy" decoding="async"></figure>
+
+<div class="masonry-item masonry-head" data-category="books"><div>
+
+##### Book design
+
+**Source materials:** stock photos, photography, copy  
+**Final rendering:** Adobe Photoshop and InDesign  
+Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of Design*
+
+</div></div>
 
 <figure class="masonry-item" data-category="books"><img src="/images/visual-design/screen-shot-2021-11-15-at-1-22-17-pm.webp" alt="Cookbook spread: &quot;Soups&quot; with a bowl of gazpacho" width="2000" height="999" loading="lazy" decoding="async"></figure>
 
