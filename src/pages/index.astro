@@ -52,14 +52,15 @@ const sections = site.sections.map((s) => ({
   .work { border-top: 1px solid var(--color-rule); padding-top: var(--space-3); margin-top: var(--space-5); }
   .work h2 { font-size: var(--size-h3); margin-bottom: var(--space-4); }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-6); }
-  .work--dataviz ul { gap: var(--space-5) var(--space-4); }
+  :is(.work--dataviz, .work--build) ul { gap: var(--space-5) var(--space-4); }
   @media (min-width: 720px) {
-    .work--dataviz ul { grid-template-columns: repeat(3, 1fr); }
+    :is(.work--dataviz, .work--build) ul { grid-template-columns: repeat(3, 1fr); }
   }
 
   .card { display: flex; flex-direction: column-reverse; gap: var(--space-3); text-decoration: none; }
   .card img { width: 100%; background: var(--color-wash); transition: transform var(--duration-base) var(--ease-out); }
   .work--dataviz .card img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+  .work--build .card img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
   .card:hover img { transform: translateY(-4px); }
   .card-text { display: flex; flex-direction: column; gap: var(--space-1); }
   .card-title { font-size: var(--size-h4); font-weight: var(--weight-regular); }

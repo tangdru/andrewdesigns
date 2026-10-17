@@ -9,6 +9,7 @@
   "description": "Andrew Tang is a product designer at the intersection of design and data, using AI to prototype quickly and designing human-in-the-loop AI workflows.",
   "intro": "Hi, I’m Andrew and I work at the **intersection of design + data**, currently designing human-in-the-loop AI workflows that turn data into decisions. I’ve agentified my process to quickly evolve ideas to working prototypes, so I can test assumptions early.",
   "sections": [
+    { "title": "Vibe code case studies", "category": "build" },
     { "title": "UX/UI case studies", "category": "ux" },
     { "title": "Data visualization case studies", "category": "dataviz" }
   ],
