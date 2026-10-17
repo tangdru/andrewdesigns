@@ -62,35 +62,27 @@ Visualizing cartographic time-series data
 <button type="button" data-filter="books" aria-pressed="false">Book design</button>
 </div>
 
-<div class="filter-note" data-category="dataviz">
+<!-- Section descriptions (hidden for now; to restore, put each back above the
+     gallery as <div class="filter-note" data-category="…">):
 
+dataviz:
 **Source materials:** raw data  
 **Visualized with:** D3, Processing, Python, Plotly, Tableau  
 **Final rendering:** Adobe Illustrator or Photoshop
 
-</div>
-
-<div class="filter-note" data-category="illustration">
-
+illustration:
 **Source materials:** primary scientific research, EM images, 3d renderings, reference art.  
 **Final rendering:** Adobe Illustrator
 
-</div>
-
-<div class="filter-note" data-category="graphic">
-
+graphic:
 **Source materials:** stock photos, photography, 3d renderings, data visualizations, illustrations  
 **Final rendering:** Photoshop
 
-</div>
-
-<div class="filter-note" data-category="books">
-
+books:
 **Source materials:** stock photos, photography, copy  
 **Final rendering:** Adobe Photoshop and InDesign  
 Cookbook designs, and page designs for Christopher Alexander’s *15 Elements of Design*
-
-</div>
+-->
 
 <div class="masonry">
 

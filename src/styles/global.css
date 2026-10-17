@@ -136,7 +136,6 @@ strong, b { font-weight: var(--weight-bold); }
 }
 .filters button:hover, .filters button[aria-pressed='true'] { color: var(--color-ink); }
 .filters button[aria-pressed='true']::after { transform: scaleX(1); }
-.prose > .filter-note[hidden] { display: none; }
 .prose > .filters + * { margin-top: var(--space-4); }
 @media (min-width: 768px) { .prose > .filters { grid-column: var(--gallery, 4 / 22); } }
 @media (prefers-reduced-motion: reduce) { .filters button::after { transition: none; } }
