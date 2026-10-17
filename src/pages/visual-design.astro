@@ -56,11 +56,11 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
       if (!img.complete) img.addEventListener('load', () => grid.refreshItems().layout(), { once: true });
     });
 
-    // Filter buttons sit before the gallery; each category opens with a
-    // full-width .masonry-head (title + source materials) that filters with it.
+    // Filter buttons (and their source-material notes) sit before the gallery in the content.
     const bar = document.querySelector<HTMLElement>('.filters');
     if (!bar) return;
     const buttons = [...bar.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const notes = [...document.querySelectorAll<HTMLElement>('.filter-note')];
     const status = document.createElement('p');
     status.className = 'visually-hidden';
     status.setAttribute('role', 'status');
@@ -69,10 +69,11 @@ const gridVars = g ? `--text:${g.text};--mtext:${g.mtext}` : undefined;
     const apply = (key: string, announce = true) => {
       if (!buttons.some((b) => b.dataset.filter === key)) key = 'all';
       buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === key)));
+      notes.forEach((n) => (n.hidden = n.dataset.category !== key));
       grid.filter((item) => key === 'all' || item.getElement()?.dataset.category === key);
       if (announce) {
         const label = buttons.find((b) => b.dataset.filter === key)?.textContent;
-        const count = grid.getItems().filter((i) => i.isActive() && i.getElement()?.matches('figure')).length;
+        const count = grid.getItems().filter((i) => i.isActive()).length;
         status.textContent = `${label}: ${count} images`;
       }
     };
